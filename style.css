@@ -1,0 +1,425 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.wrap {
+    width: 100%;
+    height: 100vh;
+    padding: 50px;
+}
+
+.player1 {
+    position: absolute;
+    top: 48%;
+    left: 48%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    transition: 0.1s;
+}
+
+.player2 {
+    position: absolute;
+    left: 52%;
+    top: 48%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    transition: 0.1s;
+}
+
+.target {
+    width: 40px;
+    height: 40px;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+.comonTarget{
+    background-image: url(./img/Ellipse.png);
+}
+.uncomonTarget{
+    background-image: url(./img/triangle.png);
+}
+.epicTarget{
+    background-image: url(./img/pentagon.png);
+}
+.legendaryTarget{
+    background-image: url(./img/heptagon.png);
+}
+.potionTarget{
+    background-image: url(./img/potion.png);
+}
+.scoreBoard {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.score {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.score:last-child {
+    margin-top: 5px;
+}
+
+.playerSkin {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 0.8em;
+    background-position: center;
+    background-size: cover;
+}
+.player1Skin {
+    background-color: green;
+}
+
+.player2Skin {
+    background-color: blue;
+}
+
+.playerNick {
+    margin-top: 5px;
+}
+.startMenu{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background-color: #333;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.startMenu__players{
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.startMenu__playerSkin{
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1em;
+}
+.player2Block .startMenu__playerSkin{
+    background-color: blue;
+}
+.player1Block .startMenu__playerSkin{
+    background-color: green;
+}
+.VS{
+    font-size: 120px;
+    color: #fff;
+    font-weight: 800;
+    font-style: italic;
+    letter-spacing: 20px;
+}
+.player1Block{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.player2Block{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.playerNameInput{
+    width: 200px;
+    height: 35px;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+    padding-left: 10px;
+    font-size: 1em;
+    color: #222;
+    margin-top: 40px;
+    transition: 0.3s;
+    box-shadow: 0 0 20px #000;
+}
+.playerNameInput:focus{
+    box-shadow: 0 0 10px #333;
+}
+.startGameBtn{
+    width: 200px;
+    height: 50px;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    margin-top: 100px;
+    color: white;
+    font-size: 1.2em;
+    background-color: transparent;
+    cursor: pointer;
+    overflow: hidden;
+}
+/* .settings{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    transition: 0.5s;
+    cursor: pointer;
+    z-index: 998;
+}
+.settings:hover{
+    transform: rotate(360deg);
+}
+.burgerMenu{
+    width: 350px;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: -350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: 2px solid #fff;
+    background-color: #111;
+    font-size: 1.2em;
+    z-index: 999;
+    transition: 0.3s;
+}
+.burger__Content{
+    width: 250px;
+}
+.burger__Content div {
+    text-align: center;
+    width: 100%;
+    background-color: white;
+    transform: skew(-0.06turn);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    margin: 30px 0;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+.burger__Content div span{
+    transform: skew(0.06turn);
+    font-size: 1em;
+}
+.burgerHeader{
+    width: 100%;
+    padding: 30px;
+}
+.burgerHeader img{
+    width: 25px;
+    cursor: pointer;
+}
+.burgerMenu__active{
+    right: 0;
+} */
+.changeSkinPage{
+    width: 900px;
+    min-height: 400px;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: calc(50% - 200px);
+    left: calc(50% - 450px);
+    z-index: 101;
+    border: 2px solid #fff;
+    border-radius: 10px;
+}
+.BGmask{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 101;
+}
+.saveSkinChanges{
+    padding: 8px 50px;
+    margin-top: 15px;
+    border: 2px solid white;
+    background-color: transparent;
+    font-size: 1.1em;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    
+}
+.changePlayer1SkinSlider{
+    width: 850px;
+    height: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sliderButtonBox{
+    width: 50px;
+}
+.sliderButtonBox button{
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    cursor: pointer;
+}
+.sliderContentContainer{
+    width: 700px;
+    height: 100%;
+    overflow: hidden;
+}
+.sliderLine{
+    width: 1000px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    transition: 0.5s;
+    right: 0px;
+}
+.sliderIteam:first-child{
+    background-image: url(./img/planet-earth.png);
+}
+.sliderIteam:nth-child(2){
+    background-image: url(./img/orange.png);
+}
+.sliderIteam:nth-child(3){
+    background-image: url(./img/bowling.png);
+}
+.sliderIteam:nth-child(4){
+    background-image: url(./img/chrome.png);
+}
+.sliderIteam:last-child{
+    background-color: orange;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/color-wheel.png);
+}
+.sliderIteam:last-child input{
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+.sliderIteam{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin: 0 10px;
+    background-size: cover;
+    background-position: center;
+}
+.sliderButtonBox button img {
+    width: 15px;
+}
+.sliderButtonBox:last-child button img {
+    transform: rotate(180deg);
+}
+.gameModeDropDown{
+    width: 100px;
+    height: 50px;
+    border: none;
+    outline: none;
+    background-color: #333;
+    cursor: pointer;
+    font-size: 1em;
+    color: white;
+}
+.gameMode__box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2em;
+    color: white;
+    width: 230px;
+    margin-bottom: 50px;
+}
+.timeBoard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -75px;
+    width: 150px;   
+    height: 40px;
+    font-size: 1.1em;
+    background-color: #eceaea;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: none;
+}
+.startMenu__playerSkin img{
+    width: 70px;
+    opacity: .7;
+}
+.winScreen{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: rgba(0, 0, 0, .8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 101;
+}
+.winScreen__conatiner{
+    background-color: #333;
+    border: 2px solid #fff;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+}
+.winScreen__conatiner span{
+    margin-bottom: 30px;
+    font-size: 1.5em;
+    color: white;
+}
+.winScreen__conatiner button{
+    width: 150px;
+    height: 45px;
+    border: 2px solid #fff;
+    color: white;
+    background-color: transparent;
+    border-radius: 8px; 
+    font-size: 1.1em;
+    cursor: pointer;
+}
